@@ -45,7 +45,7 @@ def createWorld(gameName):
     try:
       w = World(gameName)
     except Exception as e:
-      print("error: " + e)
+      print("error: ", e)
       exit()
       # print(gameName + " not found.")
       # gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
