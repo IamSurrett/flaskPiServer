@@ -46,6 +46,6 @@ def createWorld(gameName):
       w = World(gameName)
     except:
       print(gameName + " not found.")
-      gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
+      # gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
   print(gameName + " game loaded!")
   return w

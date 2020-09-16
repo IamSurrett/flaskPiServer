@@ -4,7 +4,7 @@ from gamemain import doCommand, createWorld
 
 app = Flask(__name__)
 hostString = '0.0.0.0'
-w = createWorld('Cluehouse')
+w = createWorld('ClueHouse')
 
 # @app.route('/')
 
