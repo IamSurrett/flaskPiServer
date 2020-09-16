@@ -1,7 +1,7 @@
 from world import World
 from command import Command
 from helptext import helpText
-
+from sys import exit
 
 def doCommand(w,currentInput):
     commands = {
@@ -44,8 +44,10 @@ def createWorld(gameName):
   while w == None:
     try:
       w = World(gameName)
-    except:
-      print(gameName + " not found.")
+    except Exception as e:
+      print("error: " + e)
+      exit()
+      # print(gameName + " not found.")
       # gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
   print(gameName + " game loaded!")
   return w
