@@ -40,14 +40,6 @@ def doCommand(w,currentInput):
 
 def createWorld(gameName):
   # gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
-  w = None
-  while w == None:
-    try:
-      w = World(gameName)
-    except Exception as e:
-      print("error: ", e)
-      exit()
-      # print(gameName + " not found.")
-      # gameName = input("Please enter game folder name (ClueHouse, or custom save folder)")
+  w = World(gameName)
   print(gameName + " game loaded!")
   return w
