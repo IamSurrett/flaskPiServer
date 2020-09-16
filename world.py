@@ -1,5 +1,5 @@
-import os
-import json
+from os import scandir
+from json import loads
 from location import Location
 from item import Item, makeItems
 from player import Player
@@ -14,18 +14,18 @@ class World:
 
   def createPlayer(self):
     with open(self.game + "/player.json","r") as F:
-      playerInfo = json.loads(F.read())
+      playerInfo = loads(F.read())
       self.location = self.locations[playerInfo['location']]
       return(Player(playerInfo))
 
 
   def loadLocations(self):
     locationsDict = {}
-    with os.scandir(self.game + '/rooms/') as locationObjects:
+    with scandir(self.game + '/rooms/') as locationObjects:
       for locationObjFile in locationObjects: # for each file in rooms folder
         with open(self.game + "/rooms/" + locationObjFile.name, "r") as F:
             jsontext = F.read()
-            d = json.loads(jsontext)
+            d = loads(jsontext)
             locationsDict[d["name"]] = Location(d,d["name"])
     return(locationsDict)
 
