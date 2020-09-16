@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+</head>
+<body>
+  <div class="border bg-dark text-light p-2" id="gamearea">
+    <h1>Text-Based Adventure Game (TBAG)</h1>
+    <h5 class="border border-success p-4">{{message}}</h5>
+    <form class="border border-warning px-4 py-2" method="POST">
+      <label for="commandinput">command:</label>
+      <input type="text" id="commandinput" name="command" autofocus>
+      <input type="submit" value="GO">
+    </form>
+    <div class="border border-info border-5 p-4" id="instructions">
+      <h4>Instructions</h4>
+      <p>type a command in the yellow area. hit enter or the Go button. see the result of your command in the green area. Try something like 'look' to start</p>
+      <h4>How to win</h4>
+      <p>you can't :)</p>
+      <h4>Avaliable Commands:</h4>
+      <p >go (direction):<br/>
+        moves you in the direction you choose.<br/>
+        directions are f,b,l,r (forward, back, left, right).<br/>
+        Example: 'go l'.<br/><br/>
+
+      look:<br/>
+        gives you a description of your current location.<br/><br/>
+
+      carrying:<br/>
+        lists the items in your inventory.<br/><br/>
+
+      lookaround:<br/>
+        gives you a list of items in your current location.<br/><br/>
+
+      examine (item):<br/>
+        returns the description of item. Example: 'examine key'.<br/><br/>
+
+      take (item):<br/>
+        adds item to your inventory.<br/><br/>
+
+      drop (item):<br/>
+        removes item from your inventory and leaves it in your current location.<br/><br/>
+
+      use (item,target item):<br/>
+        attempts to use the item on the target item. Example: 'use key,lock'<br/><br/>
+
+      exit:<br/>
+        ...i'm sure you can figure this one out...<br/></p>
+    </div>
+  </div>
+</body>
+</html>
