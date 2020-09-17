@@ -1,5 +1,5 @@
 from flask import Flask
-from Flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for
 from gamemain import doCommand, createWorld
 
 app = Flask(__name__)
